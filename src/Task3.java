@@ -8,8 +8,8 @@ public class Task3 {
         double investment = 0;
         double total = 0;
         double twoXInvest = 0;
-        int years = 0;
-        double INTEREST = 1.005;
+        double years = 0;
+        double INTEREST = 1.0005;
         boolean done = false;
         String trash = " ";
 
@@ -34,13 +34,19 @@ public class Task3 {
 
         } while (!done);
 
+        //Math
         total = investment + INTEREST;
+        twoXInvest = investment * 2;
 
+        //Loop
         do {
 
-            total = total
+            total = total * INTEREST;
+            years = years + 1;
 
         } while (total < twoXInvest);
+
+        System.out.println("The time taken to double your investment is: " + years + " years");
 
     }
 }
