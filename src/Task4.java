@@ -8,10 +8,35 @@ public class Task4 {
         int userNum = 0;
         int total = 1;
         boolean done = false;
+        String question = "";
 
-        userNum = number(in);
 
-        System.out.println(userNum);
+        while (true) {
+
+            userNum = number(in);
+
+            System.out.println("Are you done?(y or n)");
+
+            question = in.nextLine();
+
+            if (question.equalsIgnoreCase("y")) {
+
+                break;
+
+            }
+
+            else {
+
+                total = total * userNum;
+                System.out.println(total);
+
+            }
+
+        }
+
+        System.out.println(total);
+
+
 
     }
 
